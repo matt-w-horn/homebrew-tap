@@ -29,15 +29,35 @@ brew "tex2gdoc"
 | Formula | What it does | Pulls in |
 |---|---|---|
 | `tex2gdoc` | Converts a LaTeX paper to a `.docx` for review in Word or Google Docs, then checks the file it produced | pandoc, poppler, tectonic, python |
+| `protonctl` | A local, read-only MCP server and command line tool for Proton Mail, Proton Drive and Proton Calendar. Unofficial: not affiliated with Proton AG | Rust, to build it |
 
 Source and issues for `tex2gdoc` live at
-[matt-w-horn/tex2gdoc](https://github.com/matt-w-horn/tex2gdoc). Report problems
-with the tool there. Report problems with the packaging here.
+[matt-w-horn/tex2gdoc](https://github.com/matt-w-horn/tex2gdoc), and for
+`protonctl` at [matt-w-horn/protonctl](https://github.com/matt-w-horn/protonctl).
+Report problems with a tool there. Report problems with the packaging here.
+
+### protonctl needs one more command on a Mac
+
+```bash
+brew install matt-w-horn/tap/protonctl
+```
+
+```bash
+protonctl-sign
+```
+
+`protonctl-sign` signs the installed binary with an identity made on your own
+Mac, so that the Keychain trusts this binary and asks before it trusts
+another. macOS asks to let `codesign` use the key: choose **Allow**, not
+Always Allow. Run it again after each `brew upgrade protonctl`. Linux needs no
+signing. The
+[protonctl README](https://github.com/matt-w-horn/protonctl#install) has the
+rest of the setup.
 
 ## Uninstall
 
 ```bash
-brew uninstall tex2gdoc
+brew uninstall tex2gdoc protonctl
 ```
 
 ```bash
