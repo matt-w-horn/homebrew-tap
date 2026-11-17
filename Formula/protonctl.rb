@@ -1,9 +1,8 @@
 class Protonctl < Formula
   desc "Local, read-only MCP server and CLI for Proton Mail, Drive and Calendar"
   homepage "https://github.com/matt-w-horn/protonctl"
-  url "https://github.com/matt-w-horn/protonctl/archive/57c2de6b471292a848a2652e60344d3567db266c.tar.gz"
-  version "0.1.5"
-  sha256 "bbff5202e4ef1e8190854718f38b59cf9777e045e5739cd2ce7979cc8a086042"
+  url "https://github.com/matt-w-horn/protonctl/archive/refs/tags/v0.1.6.tar.gz"
+  sha256 "dba04ab5c038bf3e5d19801b2b55cece266df1091d88a884529e6772dbbea4b9"
   license "Apache-2.0"
   head "https://github.com/matt-w-horn/protonctl.git", branch: "main"
 
