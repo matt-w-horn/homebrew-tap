@@ -1,8 +1,8 @@
 class Protonctl < Formula
   desc "Local, read-only MCP server and CLI for Proton Mail, Drive and Calendar"
   homepage "https://github.com/matt-w-horn/protonctl"
-  url "https://github.com/matt-w-horn/protonctl/archive/refs/tags/v0.1.6.tar.gz"
-  sha256 "dba04ab5c038bf3e5d19801b2b55cece266df1091d88a884529e6772dbbea4b9"
+  url "https://github.com/matt-w-horn/protonctl/archive/refs/tags/v0.1.7.tar.gz"
+  sha256 "5ef42a90a4fbe93d3143eb1eb93c7d7892ab2a645aa852c1af38537caf41ad07"
   license "Apache-2.0"
   head "https://github.com/matt-w-horn/protonctl.git", branch: "main"
 
@@ -54,6 +54,9 @@ class Protonctl < Formula
       EOS
     end
     s + <<~EOS
+      To add protonctl to a host (quit Claude Desktop before the first):
+        protonctl connect claude-desktop
+        protonctl connect claude-code
       protonctl is unofficial: it is not affiliated with, endorsed or
       sponsored by Proton AG. Setup: https://github.com/matt-w-horn/protonctl#readme
     EOS
