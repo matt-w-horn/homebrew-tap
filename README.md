@@ -50,7 +50,20 @@ protonctl-sign
 Mac, so that the Keychain trusts this binary and asks before it trusts
 another. macOS asks to let `codesign` use the key: choose **Allow**, not
 Always Allow. Run it again after each `brew upgrade protonctl`. Linux needs no
-signing. The
+signing.
+
+Then add protonctl to a host. Each command writes the path of the installed
+protonctl into that host's settings. Quit Claude Desktop before the first:
+
+```bash
+protonctl connect claude-desktop
+```
+
+```bash
+protonctl connect claude-code
+```
+
+The
 [protonctl README](https://github.com/matt-w-horn/protonctl#install) has the
 rest of the setup.
 
