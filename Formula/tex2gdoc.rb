@@ -3,8 +3,8 @@ class Tex2gdoc < Formula
 
   desc "Convert a LaTeX paper to a .docx for review in Word or Google Docs"
   homepage "https://github.com/matt-w-horn/tex2gdoc"
-  url "https://github.com/matt-w-horn/tex2gdoc/releases/download/v0.1.0/tex2gdoc-0.1.0.tar.gz"
-  sha256 "f2fd1479b266e908a516df21cdf608fcd2f065ca8c9d850d1b5299c5c371d9d0"
+  url "https://github.com/matt-w-horn/tex2gdoc/releases/download/v0.2.0/tex2gdoc-0.2.0.tar.gz"
+  sha256 "f4ba89435b1603cf38828456330f8541d27f34fa120a859cd97b5f33428c4c40"
   license "MIT"
 
   livecheck do
@@ -20,7 +20,14 @@ class Tex2gdoc < Formula
   depends_on "python@3.14"
   depends_on "tectonic"
 
-  # No resource blocks: the package declares no runtime Python dependencies.
+  uses_from_macos "libxml2", since: :ventura
+  uses_from_macos "libxslt"
+
+  resource "lxml" do
+    url "https://files.pythonhosted.org/packages/23/ad/28ecd7cb894d172f3c9c80a075eeeb2017ac62e3632cee05a5f9493547eb/lxml-6.1.3.tar.gz"
+    sha256 "45222d94ddd511536f3b2f7d9deae3b2339b4ce0f075f1ca25703b07cad9dd21"
+  end
+
   def install
     virtualenv_install_with_resources
   end
