@@ -41,10 +41,10 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       # What the tests workflow uses, so Claude can run brew commands.
-      - uses: Homebrew/actions/setup-homebrew@63a2d4d8d4193eab3e62b1b782ff3ab8408f5b29 # 2026.11.09.1
+      - uses: Homebrew/actions/setup-homebrew@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: anthropics/claude-code-action@4d75e5f390ee76b2e09c1980ecc99ff3a2e088c8 # v1
+      - uses: anthropics/claude-code-action@c84e279f859e2591391e95bd309286eb111c345f # v1
         with:
           # Workload identity federation: the action trades the job's GitHub OIDC
           # token for a short-lived Claude API token, so no key is stored here.
